@@ -1,0 +1,39 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack -c ./webpack.node.config.js && webpack -c ./webpack.web.config.js",
+    "watch:node": "webpack watch -c ./webpack.node.config.js -o ./dist/node",
+    "watch:web": "webpack watch -c ./webpack.web.config.js -o ./dist/web",
+    "dev": "run-p watch:node watch:web serve",
+    "serve": "serve -l tcp://localhost:3002 dist",
+    "start": "npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.15.5",
+    "@babel/preset-react": "7.14.5",
+    "@telenko/node-mf": "0.0.5",
+    "babel-loader": "8.2.2",
+    "babel-plugin-styled-components": "^1.13.2",
+    "bundle-loader": "0.5.6",
+    "html-webpack-plugin": "5.3.2",
+    "npm-run-all": "^4.1.5",
+    "serve": "12.0.1",
+    "url-loader": "4.1.1",
+    "webpack": "5.52.1",
+    "webpack-cli": "4.8.0",
+    "webpack-dev-server": "4.2.1",
+    "webpack-merge": "5.8.0"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "styled-components": "5.3.1"
+  }
+}

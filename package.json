@@ -1,0 +1,19 @@
+{
+    "name": "module-federation",
+    "private": true,
+    "workspaces": {
+        "packages": [
+            "design-system",
+            "site-ssr",
+            "site-cra"
+        ]
+    },
+    "scripts": {
+        "bootstrap": "lerna exec npm install",
+        "dev": "lerna run --parallel dev",
+        "build": "lerna run build"
+    },
+    "devDependencies": {
+        "lerna": "^4.0.0"
+    }
+}
